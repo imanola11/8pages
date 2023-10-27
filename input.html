@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="myForm">
+        <p>Username</p> <input type="text" name="Name">
+        <p>Age</p> <input type="text" name="Numb">
+        <p>Email</p> <input type="text" name="Email">
+        <p>Zip Code</p> <input type="text" name="zip">
+        <p>Country</p> <select name="Country" id="" >
+            <option value="-1">pick a Country</option>
+            <option value="1">NIGERIA</option>
+            <option value="2">Ghana</option>
+        </select> <br>
+        <input type="password" name="pass"><br>
+        <button onclick="return validate()">SUBMIT</button>
+    </form>      
+    <script>
+      function validate() {
+       let username=document.myForm.Name.value;
+       let userage=document.myForm.Numb.value;
+       let useremail =document.myForm.Email.value;
+       let userzipcode=document.myForm.zip.value;
+       let usercountry=document.myForm.Country.value;
+       let userpassword=document.myForm.pass.value;
+
+       const numformat =/^[0-9]+$/;
+       const emailformat=/^\w+@[a-z]+\.[a-z]{2,3}$/;
+       const nameformat=/^[a-zA-Z]+$/;
+       const passwordformat= /^.{8,}$/ ;
+
+       if(nameformat=='' ){
+        alert('please provide yourname');
+        document.myForm.Name.focus();
+        document.myForm.Name.value='';
+        return false;
+       }
+
+       if(!username.match(nameformat)) {
+       alert('Your name ought to be in letter only');
+       document.myForm.Name.focus();
+       return false;
+      }
+
+       if(!userage.match(numformat)){
+        alert('your age must be in number');
+        document.myForm.Numb.value ='';
+        document.myForm.Numb.focus;
+        return false;
+       }
+
+      if(!useremail.match(emailformat)){
+        alert('that is not a right email');
+        document.myForm.Email.value ='';
+        document.myForm.Email.focus;
+        return false;
+    }
+
+     if(userzipcode.length!=5 || !userzipcode.match(numformat)) {
+        alert('a zip code is a 5 digit numbe');
+        document.myForm.Zip.value ='';
+        document.myForm.Zip.focus;
+        return false;
+    }
+
+    if (usercountry==-1){
+        alert('please select a country');
+        return false;
+    }
+
+    if(!userpassword.match(passwordformat)){
+        alert('your password must be minimum of 8');
+        document.myForm.pass.value ='';
+        document.myForm.pass.focus;
+        return false;
+       }
+    }
+    </script>
+</body>
+</html>

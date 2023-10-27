@@ -1,0 +1,401 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>siwes.com</title>
+    <link rel="stylesheet" href="siwes.css">
+    <style>
+        
+        /* @media screen and(min-width:990px){
+            button{
+                display: inline-block;
+            }
+        } */
+        .div1{
+            background-color: rgb(189, 142, 233);
+            text-align: center;
+            margin-left: 300px;
+            margin-right: 300px;
+            border-radius: 40px;
+            margin-top: 40px;
+            height: 230px;
+            padding: 50px;
+        }
+        .ani{
+            animation-name: yo;
+            animation-duration: 10s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes yo{
+            from{
+                margin-left: 250px;
+            }
+            To{
+                margin-left: 400px;
+            }
+        }
+        #input1{
+            background-color: white;
+            width: 10rem;
+            height: 3rem;
+            font-size: 15px;
+            border-radius: 20px;
+        }
+        #input2{
+            background-color: white;
+            margin-left: 40px;
+            width: 10rem;
+            height: 3rem;
+            font-size: 15px;
+            border-radius: 20px;
+        }
+        button{
+            padding: 20px;
+            margin: 20px;
+            width: 5rem;
+            border-radius: 20px;
+            height: 5rem;
+            font-size: 35px;
+            background-color: pink;
+        }
+        button:hover{
+            background-color: aqua;
+            color: white;
+        }
+        button:active{
+            background-color: rgb(189,142,233);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+ <!-- <h1>WELCOME  TO  JAVASCRIPT  WEBSITE</h1>
+    <button onclick="myFunction()">CLICK</button>
+    <script>
+        const myFunction=()=>{
+            let a='how are you?';
+            alert (a);
+        };
+    </script>  -->
+    <!-- <script>
+        // let a=prompt('How much is garri?');
+        // a=+a;
+        // let b=prompt('How much is beans?');
+        // b=+b;
+        // c=a+b;
+        // alert(c);
+        // let x=10;
+        // x**=5;
+        // alert(x);
+              
+        //  let a=prompt('how old are you?');
+        //  let b=prompt('whats your gender?');
+        //  if(a>=18 && b=='male'){
+        //      alert('you can take bear ' )
+        // }
+        //  else{
+        //      alert('you can take table water')
+        // }
+
+        // let age=prompt('how old are you?');
+        // let drink=(age>=20)? 'Beer':'water';
+        // alert (drink);
+
+
+        // let age=prompt('how old are you?')
+        // if(age<18){
+        //     alert('not old enough');
+        // }
+        // else if(age<=25){
+        //     alert('you can only apply for graduate trainee');
+        // }
+        // else if(age<50){
+        //     alert('you can apply'
+        // }
+        // else{
+        //     alert('go and retire');
+        // }
+    //     let x=prompt('how old are you?');
+    //     let y=prompt('what is your gender?')
+
+    //     if(x<18){
+    //         alert('take only water');
+    //     }
+    //     else if( x<25 && y=='female'){
+    //         alert('take coke');
+    //     }
+    //     else if ( x<=40 && y=='female'){
+    //         alert('take beer');
+    //     }
+    //     else if( x<22 && y=='male'){
+    //         alert('take wine');
+    //     }
+    //     else if( x<50 && y=='male'){
+    //         alert('take origin');
+    //     }
+    //     else{
+    //         alert('take only fanta');
+    //     }
+    // </script> -->
+    <script>
+        // let x=new Date().getHours();
+        // if (x<=11){
+        //     alert(`good morning`);
+        // }
+        // else if(x<=16){
+        //     alert(`good afternoon`);
+        // }
+        // else if(x<=19){
+        //     alert(`good evening`);
+        // }
+        // else{
+        //     alert(`good night`);
+        // }
+
+
+        // let age =prompt(`how old are you?`);
+        // let apply;
+        // if (isNaN(age)){
+        //     apply=(`input is not a number`)
+        // }
+        // else{
+        //     apply=(age<25)?"you are too young":"you are too old";
+        // }
+        // alert(`${apply} to apply for this job`);
+        
+        // function iman(){
+        //     let que=prompt('what is 10+2-6*2/3');
+        //     let ans=Number(que);
+        //     switch(ans){
+        //         case 5 :
+        //             alert (`almost correct`);
+        //     break;
+        //     case 7 :
+        //         alert(`come down a  bit`);
+        //         break;
+        //         case 6:
+        //         alert(`correct,the answer is 6`);
+        //         break;
+        //         case 8:
+        //             alert(`you are right`);
+        //     }
+        //  }
+
+        // let que=prompt('what is 10+2-6*2/3');
+        //  que=Number(que);
+        // let answer;
+        //  switch(que){
+        //       case 5 :
+        //          answer='almost correct';
+        //      break;
+
+        //     case 7 :
+        //          answer='come down a  bit';
+        //       break;
+
+        //      case 6:
+        //           answer='correct,the answer is 6';
+        //       break;
+
+        //       case 8:
+        //           answer='too high';
+        //     break;
+
+        //      default:
+        //          answer='you are wrong';
+        //    }
+        //    alert(answer);
+
+        //       LOOP
+        // for(let i=1;i<=10;i++){
+        //     alert(`Number ${i}:`);
+        // }
+
+        // const retireAge=65;
+        // let currentAge=prompt('how old are you?');
+        // let yearLeft=retireAge-currentAge;
+        // alert(`Year left at service is ${yearLeft}`);
+        //         Boolean (True/false)
+        // // let x=15;
+        // // let y=12;
+        // // alert(y>15);
+                //  OBJECCT
+    //     let restaurant={
+    //         name:'iman',
+    //         cat:'african dish',
+    //         menu:'rice',
+    //         drink:'coke',
+    //     }
+    //    alert(`thia is ${restaurant.name} he own the shop`);
+        //          Array
+        // let cities=['ib','lagos','abuja','oyo'];
+        // alert(`i am on my way to ${cities[1]}`);
+            //    OPERATOR 1.NO of values involed 2.function they perform
+            // Function they perform
+        // let x=prompt('how old are you?');
+        // x=+x
+        // let y=prompt("how old are you y?");
+        // y=+y
+        // alert(x+y);
+            // comparism operator
+        //  let x="10";
+        //  let y=10;
+        //  alert(x!=y);
+    </script>
+    </body>
+</html>
+    <div style="height: 40px; background-color: aqua;">
+    <h1 style="text-align: centr;" class="ani">SIMPLE CALCULATOR USING JAVASCRIPT</h1>
+    </div>
+    <div>
+         <body background="new.png" style="background-repeat: no-repeat;background-size: cover;">
+        <div class="div1">
+            <input type="text" id="input1" placeholder="INSERT A NUMBER"> 
+            <span id="symbol"></span>
+            <input type="text" id="input2" placeholder="INSERT A NUMBER">
+            <span id="answer"></span><br>
+            <button  class="add" onclick="plus()">+</button>
+            <button class="min" onclick="minus()">-</button>
+            <button class="div" onclick="divv()">/</button>
+            <button class="mul" onclick="mult()">x</button>
+        </div>
+        <a href="assignment1.html"> <button style="width: 250px;font-size: 20px;margin-left: 160px;margin-top: 70px;">ASSIGNMENT 1</button></a> <a href="assignment4.html"> <button style="width: 250px;font-size: 20px;">ASSIGNMENT 2</button></a> <a href="#"> <button style="width: 250px;font-size: 20px;">ASSIGNMENT 3</button></a> <a href="assignment2.html"> <button style="width: 250px;font-size: 20px;">ASSIGNMENT 4</button></a>
+    </div>
+    <script>
+        function plus(){
+            let a=Number(document.getElementById('input1').value);
+            let b=Number(document.getElementById('input2').value);
+            let c=document.getElementById('symbol');
+            let d=document.getElementById('answer');
+            let e=a+b;
+            c.style.fontSize='40px'
+            c.style.marginLeft='20px'
+            d.style.fontSize='40px'
+            c.innerHTML='+';
+            d.innerHTML='='+e
+        }
+        function minus(){
+            let a=Number(document.getElementById('input1').value);
+            let b=Number(document.getElementById('input2').value);
+            let c=document.getElementById('symbol');
+            let d=document.getElementById('answer');
+            let f=a-b;
+            c.innerHTML='-'
+            c.style.fontSize='40px'
+            c.style.marginLeft='20px'
+            d.innerHTML='=' +f
+            d.style.fontSize='40px'
+        }
+        function divv(){
+            let a=Number(document.getElementById('input1').value);
+            let b=Number(document.getElementById('input2').value);
+            let c=document.getElementById('symbol');
+            let d=document.getElementById('answer');
+            let g=a/b;
+            c.innerHTML='/'
+            d.style.fontSize='40px'
+            c.style.fontSize='40px'
+            c.style.marginLeft='20px'
+            d.innerHTML='=' +g
+        }function mult(){
+            let a=Number(document.getElementById('input1').value);
+            let b=Number(document.getElementById('input2').value);
+            let c=document.getElementById('symbol');
+            let d=document.getElementById('answer');
+            let h=a*b;
+            c.innerHTML='x';
+            d.style.fontSize='40px'
+            c.style.fontSize='40px';
+            c.style.marginLeft='20px;'
+            d.innerHTML='=' +h;
+        }
+    </script> 
+    <!-- <script>
+        for(let i=1;i<=10;i++){
+            alert(`Number ${i}:`);
+        }
+    </script> -->
+           <!-- loop in array -->
+    <!-- <script>
+        let cities=['ib','lag','oyo']
+        for(let i=0; i<cities.length; i++){
+            alert(cities[i]);
+        }
+    </script> -->
+             <!-- loop in a loop -->
+    <!-- <script>
+        let cities=['ib','lag','oyo']
+        for(let i=0; i<cities.length; i++){
+            alert(cities[i]);
+        }
+        for(let exercise=1;exercise<4;exercise++){
+            alert(`...starting exercise ${exercise}`)
+        for(let rep=1;rep<6;rep++){
+            alert(`lifting weighet repetition ${rep}`)
+        }
+        }
+    </script> -->
+           <!-- while -->
+    <!-- <script>
+        let i=0
+        while(i<6){
+            alert(i);
+            i++
+        }
+    </script> -->
+   <!-- <script>
+       let i=10;
+       do{
+        alert (i)
+        i--
+       } while(i>1)
+   </script> -->
+
+        <!-- ERROR -->
+   <!-- <script>
+    for(let i=2;i<=16;i++){
+        if(i%2==1){
+            continue;
+        }
+        alert(a);
+    }
+         index Of 
+   </script> 
+   <button onclick="ola()">submit</button>
+    <script>
+        function ola(){
+        let x='daniel is a nice guy'
+        alert(x.indexOf('guy'));
+    }-->
+           <!-- SLICE
+    <button onclick="ola()">submit</button>
+    <script>
+    function ola(){
+    let x='dami is a nice boy';
+    alert(x.slice(10,16));
+    } 
+         HOW TO USE REPLACE
+    <h2 id="greet">WELCOME VISITOR</h2>
+    <button onclick="yo()">GREET</button>
+    <script>
+        function yo(){
+            let x=document.getElementById('greet').innerHTML;
+            let q=prompt(`what is your name?`);
+            let y= x.replace('VISITOR', q);
+            document.getElementById('greet').innerHTML=y;
+        }
+      HOW TO USE MATCTH 
+    <Script>
+        let x='victor';
+        alert(x.match('vict'));
+    </Script>
+-->
+    
+
+    </script>
+</body>
+</html

@@ -1,0 +1,68 @@
+/* .main{
+    background-color: white;
+    height: 70px;
+}
+.menu1{
+    width: 100rem; ;
+    background-color: blue;
+}
+.ion{
+    margin-right:950px ;
+} */
+
+.inside{
+    height: 10rem;
+    width: 45rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(9,32,87);
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.main2{
+    position: relative;
+    color: black;
+}
+.bottom-left{
+   position: absolute;
+   bottom: 20%;
+   left: 30%;
+}
+.main3{
+    margin-top: 70px;
+    height: 20rem;
+    text-align: center;
+}
+.main4{
+    background-color: rgb(247,249,250);
+    height: 30rem;
+}
+@media screen and (max-width: 480px) {
+.inside{
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+}
+.mii, .show{
+    display: block;
+}
+.main2, .bottom-left{
+    width: 100%;
+    left: 0;
+}
+.main3, .main4{
+    height: auto;
+}
+.box{
+    height: auto;
+    padding: 20px;
+}
+.footer{
+    margin-left: 0;
+    padding: 20px;
+    width: 100%;
+}
+}

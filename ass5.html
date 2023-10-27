@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> 
+<body> 
+<div>
+    <h2>INVESTMENT CALCULATOR</h2>
+    <div class="wrapper">
+        <p>AMOUNT TO INVEST</p>
+        <input type="text" id="input1" placeholder="HOW MUCH DO YOU WANT TO INVEST" required style="width: 17rem;" ><br><br>
+        <p>HOW LONG O YOU WANT TO INVEST WITH US?</p>
+        <select id="input2">
+            <option value="" >Choose duration option</option>
+            <option value="1">A month</option>
+            <option value="2">Two months</option>
+            <option value="3">Three months</option>
+            <option value="4">Four months</option>
+            <option value="5">Five months</option>
+            <option value="6">6 month</option>
+            <option value="7">7 month</option>
+            <option value="8">8 month</option>
+            <option value="9">9 month</option>
+            <option value="10">10 month</option>
+            <option value="11">11 month</option>
+            <option value="12">12 month</option>
+        </select><br>
+        <button id="cal" onclick="fun()" style="margin-top: 50px;width: 10rem;background-color: aqua;height: 25px;border-radius: 5px;">CALULATE</button>
+        <span id="ans"></span>
+    </div>
+<script>
+    document.getElementById('cal').addEventListener('click',
+    function fun(){
+        let investment=document.getElementById('input1').value;
+        let duration=document.getElementById('input2').value;
+        let profit= 0.1*investment;
+        let withdraw=Number(profit*duration) + Number(investment);
+        document.getElementById('ans').innerHTML=withdraw
+        alert(withdraw)
+    }
+ ) 
+</script>
+</body>
+</html>
